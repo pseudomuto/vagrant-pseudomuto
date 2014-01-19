@@ -1,20 +1,16 @@
 # Vagrant::Pseudomuto
 
-TODO: Write a gem description
+This is my custom vagrant plugin for managing guest machine setup.
+
+Since this is mostly just for my custom setup, and likely only useful to others as a reference, I won't be publishing this gem to rubygems.
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Create a new directory for your application and add the following to your _Gemfile_
 
-    gem 'vagrant-pseudomuto'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install vagrant-pseudomuto
+```
+gem 'vagrant-pseudomuto', github: 'pseudomuto/vagrant-pseudomuto'
+```
 
 ## Usage
 

@@ -14,4 +14,8 @@ class PluginTest < Minitest::Test
   def test_exposes_bundle_command
     assert_includes @plugin.components.commands.keys, :bundle
   end
+
+  def test_defines_cookbooks_action_hook
+    refute_equal 0, @plugin.components.action_hooks[:__all_actions__].size
+  end
 end
