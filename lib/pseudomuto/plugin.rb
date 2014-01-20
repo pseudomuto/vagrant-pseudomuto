@@ -25,9 +25,14 @@ module Pseudomuto
       end
     end
 
-    command "bundle" do
+    command 'bundle' do
       require_relative 'plugin/commands/bundle'
       Plugin::Commands::Bundle
+    end
+
+    command 'pseudo-init' do
+      require_relative 'plugin/commands/pseudo_init'
+      Plugin::Commands::PseudoInit
     end
 
     def self.initialize_test_environment
