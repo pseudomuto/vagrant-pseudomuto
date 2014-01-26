@@ -1,7 +1,7 @@
 module Pseudomuto
-  module Plugin
+  module VagrantPlugin
     module Commands
-      class PseudoInit < Vagrant.plugin(VAGRANT_PLUGIN_VERSION, :command)
+      class PseudoInit < Vagrant.plugin('2', :command)
 
         def execute
           vagrant_file = 'Vagrantfile'
@@ -24,11 +24,11 @@ Vagrant.configure("2") do |config|
     config.librarian_chef.cheffile_dir = '.vagrant/cookbooks'
 
     chef.cookbooks_path = [
-      "#{config.librarian_chef.cheffile_dir}/cookbooks",
-      "#{config.librarian_chef.cheffile_dir}/tmp/librarian/cookbooks"
+      "\#{config.librarian_chef.cheffile_dir}/cookbooks",
+      "\#{config.librarian_chef.cheffile_dir}/tmp/librarian/cookbooks"
     ]
 
-    chef.roles_path     = "#{config.librarian_chef.cheffile_dir}/roles/dev"
+    chef.roles_path     = "\#{config.librarian_chef.cheffile_dir}/roles/dev"
   end
 end
 TEMPLATE

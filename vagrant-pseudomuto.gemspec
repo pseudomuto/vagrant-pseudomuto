@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'pseudomuto/plugin/version'
+require 'vagrant-pseudomuto/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "vagrant-pseudomuto"
-  spec.version       = Pseudomuto::Plugin::VERSION
+  spec.version       = Pseudomuto::VagrantPlugin::VERSION
   spec.authors       = ["pseudomuto"]
   spec.email         = ["david.muto@gmail.com"]
   spec.summary       = %q{My personal vagrant plugin}

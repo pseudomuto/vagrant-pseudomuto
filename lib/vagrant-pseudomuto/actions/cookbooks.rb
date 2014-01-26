@@ -1,14 +1,14 @@
 module Pseudomuto
-  module Plugin
+  module VagrantPlugin
     module Actions
       class Cookbooks
         def initialize(app, env)
           @app = app
-          @logger = Log4r::Logger.new("pseudomuto::cookbooks")
         end
 
         def call(env)
           @env = env
+          ui.info "Cloning cookbooks..."
 
           unless cookbooks_installed?
             clone_cookbooks
@@ -34,6 +34,7 @@ module Pseudomuto
         end
 
         def clone_cookbooks
+          puts "Cloning cookbooks..."
           ui.info "Cloning cookbooks to #{cookbooks_path}"
 
           cmd = <<-COMMAND
@@ -58,7 +59,7 @@ module Pseudomuto
         end
 
         def ui
-          @env[:machine].env.ui
+          @env[:ui]
         end
       end
     end

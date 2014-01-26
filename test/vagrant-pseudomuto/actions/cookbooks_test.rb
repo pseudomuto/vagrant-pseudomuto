@@ -5,7 +5,7 @@ class CookbooksActionTest < Minitest::Test
     app = mock('vagrant app')
     app.expects(:call)
 
-    @action = Pseudomuto::Plugin::Actions::Cookbooks.new(app, nil)
+    @action = Pseudomuto::VagrantPlugin::Actions::Cookbooks.new(app, nil)
   end
 
   def test_call_clones_cookbooks_when_not_installed

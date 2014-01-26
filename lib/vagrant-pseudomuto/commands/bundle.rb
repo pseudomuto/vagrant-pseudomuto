@@ -1,7 +1,7 @@
 module Pseudomuto
-  module Plugin
+  module VagrantPlugin
     module Commands
-      class Bundle < Vagrant.plugin(VAGRANT_PLUGIN_VERSION, :command)
+      class Bundle < Vagrant.plugin('2', :command)
 
         def execute
           PLUGINS.each do |plugin|

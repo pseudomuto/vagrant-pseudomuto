@@ -2,7 +2,7 @@ require 'test_helper'
 
 class PluginTest < Minitest::Test
   def setup
-    @plugin = Pseudomuto::VagrantPlugin
+    @plugin = Pseudomuto::VagrantPlugin::Plugin
   end
 
   def test_defines_metadata
