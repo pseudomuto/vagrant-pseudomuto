@@ -8,15 +8,12 @@ Since this is mostly just for my custom setup, and likely only useful to others 
 
 ## Installation
 
-Create a new directory for your application and add the following to your _Gemfile_
-
 ```
-gem 'vagrant-pseudomuto', github: 'pseudomuto/vagrant-pseudomuto'
+$ vagrant plugin install vagrant-pseudomuto --plugin-source <gem_source>
 ```
 
-Then run the following:
+Create a new directory for your application and run the following
 
 ```
-bundle install
 vagrant pseudo-init
 ```
