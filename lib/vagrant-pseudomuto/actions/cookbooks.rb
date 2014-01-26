@@ -8,7 +8,6 @@ module Pseudomuto
 
         def call(env)
           @env = env
-          ui.info "Cloning cookbooks..."
 
           unless cookbooks_installed?
             clone_cookbooks
