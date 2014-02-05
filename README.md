@@ -6,14 +6,8 @@ This is my custom vagrant plugin for managing guest machine setup.
 
 Since this is mostly just for my custom setup, and likely only useful to others as a reference, I won't be publishing this gem to rubygems.
 
-## Installation
+## Usage
 
-```
-$ vagrant plugin install vagrant-pseudomuto --plugin-source <gem_source>
-```
+If this is the first time you're using this, run `script/setup`. This script will add your SSH key (_~/.ssh/id_rsa) to the authentication agent and source `script/bootstrap`.
 
-Create a new directory for your application and run the following
-
-```
-vagrant pseudo-init
-```
+_script/bootstrap runs `bundle install --without test`...weird I know, but it's a vagrant thing. You ca  run this anytime without causing any issues.
