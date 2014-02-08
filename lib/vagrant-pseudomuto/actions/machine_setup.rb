@@ -4,6 +4,7 @@ module Pseudomuto
       class MachineSetup
 
         def initialize(app, env)
+          @app = app
         end
 
         def call(env)
@@ -12,6 +13,8 @@ module Pseudomuto
           ensure_host_rules([
             'pseudocms.dev'
           ])
+
+          @app.call(env)
         end
 
         private

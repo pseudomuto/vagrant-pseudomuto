@@ -5,6 +5,7 @@ require_relative 'commands/bundle'
 require_relative 'commands/pseudo_init'
 require_relative 'actions/cookbooks'
 require_relative 'actions/machine_setup'
+require_relative 'actions/ssh_config'
 
 module Pseudomuto
   module VagrantPlugin
@@ -31,6 +32,10 @@ module Pseudomuto
 
       action_hook 'machine_setup' do |hook|
         hook.before Vagrant::Action::Builtin::Provision, Actions::MachineSetup
+      end
+
+      action_hook "ssh-config" do |hook|
+        hook.before Vagrant::Action::Builtin::Provision, Actions::SSHConfig
       end
     end
   end
