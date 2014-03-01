@@ -14,8 +14,6 @@ Vagrant.configure("2") do |config|
   config.vm.network :private_network, ip: VAGRANT_IP
 
   config.vm.synced_folder ".", "/vagrant", disabled: true
-  config.vm.synced_folder 'src', '/home/vagrant/src', nfs: true
-
   config.ssh.forward_agent = true
 
   config.vm.provision :chef_solo do |chef|
