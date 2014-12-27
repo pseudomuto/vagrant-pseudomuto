@@ -11,7 +11,9 @@ module Pseudomuto
           env[:ui].info "[pseudomuto] verifying /etc/hosts entries..."
 
           ensure_host_rules([
-            'pseudocms.dev'
+            'pseudocms.dev',
+            'org1.contest-app.io',
+            'org2.contest-app.io'
           ])
 
           @app.call(env)
